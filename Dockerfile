@@ -1,5 +1,5 @@
 FROM alpine:3.6
-LABEL mainintatner="lunksana <zoufeng4@gmail.com"
+LABEL mainintatner="lunksana <zoufeng4@gmail.com>"
 
 RUN apk update && \
     apk add wget && \
