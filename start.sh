@@ -4,6 +4,6 @@ if [ ! -f $filepath ]; then
 echo "Error"
 exit 1
 else
-/frp/frpc -c /frp/conf/frpc.ini
+/frp/frpc -c $filepath
 fi
 
