@@ -1,4 +1,4 @@
-FROM alpine:3.6
+FROM alpine
 LABEL mainintatner="lunksana <zoufeng4@gmail.com>"
 
 RUN apk update && \
@@ -12,7 +12,6 @@ RUN apk update && \
     mkdir conf && \
     cd frp* && \
     cp frpc ../ && \
-    cp frpc.ini ../conf && \
     cd ../ && \
     rm -rf frp_* && \
     apk del wget
