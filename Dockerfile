@@ -2,8 +2,7 @@ FROM alpine
 LABEL mainintatner="lunksana <zoufeng4@gmail.com>"
 ARG FRP_VR=0.20.0
 
-RUN apk update && \
-    apk add wget && \
+RUN apk add wget && \
     rm /var/cache/apk/* && \
     mkdir /frp && \
     cd /frp && \
