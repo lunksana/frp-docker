@@ -1,12 +1,13 @@
 FROM alpine
 LABEL mainintatner="lunksana <zoufeng4@gmail.com>"
+ARG FRP_VR=0.20.0
 
 RUN apk update && \
     apk add wget && \
     rm /var/cache/apk/* && \
     mkdir /frp && \
     cd /frp && \
-    wget --no-check-certificate https://github.com/fatedier/frp/releases/download/v0.20.0/frp_0.20.0_linux_amd64.tar.gz && \
+    wget --no-check-certificate "https://github.com/fatedier/frp/releases/download/v${FRP_VR}/frp_${FRP_VR}_linux_amd64.tar.gz" && \
     tar xzf *.tar.gz && \
     rm *.gz && \
     mkdir conf && \
